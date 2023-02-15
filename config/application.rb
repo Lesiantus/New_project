@@ -14,8 +14,8 @@ module Project
     # Configuration for the application, engines, and railties goes here.
     #
     config.i18n.available_locales = [:en, :ru]
-    config.i18n.default_locale = :en
-    config.time_zone = "Asia/Tomsk"
+    config.i18n.default_locale = :ru
+    config.time_zone = "Asia/Krasnoyarsk"
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end

@@ -15,7 +15,7 @@ module Project
     #
     config.i18n.available_locales = [:en, :ru]
     config.i18n.default_locale = :ru
-    config.time_zone = "Asia/Krasnoyarsk"
+    config.time_zone = "Krasnoyarsk"
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end

@@ -5,10 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-user = User.create!(name: "Admin", email: "example@mail.org", admin: true)
-user1 = User.create!(name: "Igor", email: "example1@mail.org")
-user2 = User.create!(name: "George", email: "example2@mail.org")
-user3 = User.create!(name: "Ivan", email: "example3@mail.org")
+users = User.create!([
+  { name: "Admin", email: "example@mail.org", admin: true },
+  { name: "Igor", email: "example1@mail.org"},
+  { name: "George", email: "example2@mail.org" },
+  { name: "Ivan", email: "example3@mail.org"} ])
 
 categories = Category.create!([
   { title: 'Ruby' },
@@ -16,9 +17,13 @@ categories = Category.create!([
 ])
 
 tests = Test.create!([
-  { title: 'Arrays', level: 0, category_id: categories[0].id, author_id: user.id },
-  { title: 'Hashes', level: 1, category_id: categories[0].id, author_id: user.id },
-  { title: 'Controller', level: 2, category_id: categories[1].id, author_id: user.id }
+  { title: 'Arrays', level: 0, category_id: categories[0].id, author_id: users[0].id },
+  { title: 'Hashes', level: 1, category_id: categories[0].id, author_id: users[0].id },
+  { title: 'Controller', level: 2, category_id: categories[1].id, author_id: users[0].id },
+  { title: 'Model', level: 2, category_id: categories[1].id, author_id: users[0].id },
+  { title: 'Routing', level: 2, category_id: categories[1].id, author_id: users[0].id },
+  { title: 'Integers', level: 0, category_id: categories[0].id, author_id: users[0].id },
+  { title: 'Strings', level: 0, category_id: categories[0].id, author_id: users[0].id }
 ])
 
 questions = Question.create!([
@@ -48,3 +53,12 @@ answers = Answer.create!([
 { body: 'ActionController', correct: true, question_id: questions[9].id },
 { body: 'public', correct: true, question_id: questions[10].id }
 ])
+
+results = Result.create!([
+{ test_id: tests[0].id, user_id: users[1].id },
+{ test_id: tests[1].id, user_id: users[1].id },
+{ test_id: tests[4].id, user_id: users[1].id },
+{ test_id: tests[5].id, user_id: users[1].id },
+{ test_id: tests[6].id, user_id: users[1].id },
+{ test_id: tests[3].id, user_id: users[1].id },
+{ test_id: tests[2].id, user_id: users[2].id }])

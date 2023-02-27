@@ -25,7 +25,7 @@ tests = Test.create!([
   { title: 'Integers', level: 0, category_id: categories[0].id, author_id: users[0].id },
   { title: 'Strings', level: 0, category_id: categories[0].id, author_id: users[0].id }
 ])
-
+=begin
 questions = Question.create!([
   { body: 'What method removes all nil elements from the array?', test_id: tests[0].id },
   { body: 'What method returns the first element, or the first n elements, of the array.?', test_id: tests[0].id },
@@ -53,6 +53,7 @@ answers = Answer.create!([
 { body: 'ActionController', correct: true, question_id: questions[9].id },
 { body: 'public', correct: true, question_id: questions[10].id }
 ])
+=end
 
 results = Result.create!([
 { test_id: tests[0].id, user_id: users[1].id },

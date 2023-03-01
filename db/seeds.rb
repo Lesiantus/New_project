@@ -17,13 +17,13 @@ categories = Category.create!([
 ])
 
 tests = Test.create!([
-  { title: 'Arrays', level: 0, category_id: categories[0].id, author_id: users[0].id },
-  { title: 'Hashes', level: 1, category_id: categories[0].id, author_id: users[0].id },
-  { title: 'Controller', level: 2, category_id: categories[1].id, author_id: users[0].id },
-  { title: 'Model', level: 2, category_id: categories[1].id, author_id: users[0].id },
-  { title: 'Routing', level: 2, category_id: categories[1].id, author_id: users[0].id },
-  { title: 'Integers', level: 0, category_id: categories[0].id, author_id: users[0].id },
-  { title: 'Strings', level: 0, category_id: categories[0].id, author_id: users[0].id }
+  { title: 'Arrays', level: 0, category: categories[0], author: users[0] },
+  { title: 'Hashes', level: 1, category: categories[0], author: users[0] },
+  { title: 'Controller', level: 2, category: categories[1], author: users[0] },
+  { title: 'Model', level: 2, category: categories[1], author: users[0] },
+  { title: 'Routing', level: 2, category: categories[1], author: users[0] },
+  { title: 'Integers', level: 0, category: categories[0], author: users[0] },
+  { title: 'Strings', level: 0, category: categories[0], author: users[0] }
 ])
 =begin
 questions = Question.create!([
@@ -56,10 +56,10 @@ answers = Answer.create!([
 =end
 
 results = Result.create!([
-{ test_id: tests[0].id, user_id: users[1].id },
-{ test_id: tests[1].id, user_id: users[1].id },
-{ test_id: tests[4].id, user_id: users[1].id },
-{ test_id: tests[5].id, user_id: users[1].id },
-{ test_id: tests[6].id, user_id: users[1].id },
-{ test_id: tests[3].id, user_id: users[1].id },
-{ test_id: tests[2].id, user_id: users[2].id }])
+{ test: tests[0], user: users[1] },
+{ test: tests[1], user: users[1] },
+{ test: tests[4], user: users[1] },
+{ test: tests[5], user: users[1] },
+{ test: tests[6], user: users[1] },
+{ test: tests[3], user: users[1] },
+{ test: tests[2], user: users[2] }])

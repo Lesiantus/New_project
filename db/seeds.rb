@@ -13,7 +13,10 @@ users = User.create!([
 
 categories = Category.create!([
   { title: 'Ruby' },
-  { title: 'Ruby on Rails' }
+  { title: 'Ruby on Rails' },
+  { title: 'Some cat1' },
+  { title: 'Another cat' },
+  { title: 'Grumpy cat' }
 ])
 
 tests = Test.create!([
@@ -23,37 +26,46 @@ tests = Test.create!([
   { title: 'Model', level: 2, category: categories[1], author: users[0] },
   { title: 'Routing', level: 2, category: categories[1], author: users[0] },
   { title: 'Integers', level: 0, category: categories[0], author: users[0] },
+  { title: 'Middle test', level: 2, category: categories[0], author: users[0] },
+  { title: 'Middle test 2', level: 3, category: categories[0], author: users[0] },
+  { title: 'Middle test 3', level: 4, category: categories[0], author: users[0] },
+  { title: 'Hard test 1', level: 5, category: categories[0], author: users[0] },
+  { title: 'Hard test 2', level: 6, category: categories[0], author: users[0] },
+  { title: 'Hard test 3', level: 10, category: categories[0], author: users[0] },
   { title: 'Strings', level: 0, category: categories[0], author: users[0] }
 ])
-=begin
+
 questions = Question.create!([
-  { body: 'What method removes all nil elements from the array?', test_id: tests[0].id },
-  { body: 'What method returns the first element, or the first n elements, of the array.?', test_id: tests[0].id },
-  { body: 'What method returns the number of elements in array?', test_id: tests[0].id },
-  { body: 'What method invokes the given block once for each element of array?', test_id: tests[0].id },
-  { body: 'What method returns the object in ary with the minimum value?', test_id: tests[0].id },
-  { body: 'What method calls the given block with each key-value pair?', test_id: tests[1].id },
-  { body: 'What method returns true if there are no hash entries, false otherwise?', test_id: tests[1].id },
-  { body: 'What method returns true if any element satisfies a given criterion?', test_id: tests[1].id },
+  { body: 'What method removes all nil elements from the array?', test: tests[0] },
+  { body: 'What method returns the first element, or the first n elements, of the array.?', test: tests[0] },
+  { body: 'What method returns the number of elements in array?', test: tests[0] },
+  { body: 'What method invokes the given block once for each element of array?', test: tests[0] },
+  { body: 'What method returns the object in ary with the minimum value?', test: tests[0] },
+  { body: 'What method calls the given block with each key-value pair?', test: tests[1] },
+  { body: 'What method returns true if there are no hash entries, false otherwise?', test: tests[1] },
+  { body: 'What method returns true if any element satisfies a given criterion?', test: tests[1] },
   { body: 'What method returns the count of entries in hash?', test_id: tests[1].id },
-  { body: 'From what class inherits all new generated controllers?', test_id: tests[2].id },
-  { body: 'what kind of methods are callable as actions?', test_id: tests[2].id }
+  { body: 'From what class inherits all new generated controllers?', test: tests[2] },
+  { body: 'what kind of methods are callable as actions?', test: tests[2] },
+  { body: 'some question with wrong answer?', test: tests[2] },
+  { body: 'one more question with wrong answer?', test: tests[2] }
 ])
 
 answers = Answer.create!([
-{ body: 'compact', correct: true, question_id: questions[0].id },
-{ body: 'first()', correct: true, question_id: questions[1].id },
-{ body: 'length', correct: true, question_id: questions[2].id },
-{ body: 'map', correct: true, question_id: questions[3].id },
-{ body: 'min', correct: true, question_id: questions[4].id },
-{ body: 'each', correct: true, question_id: questions[5].id },
-{ body: 'empty?', correct: true, question_id: questions[6].id },
-{ body: 'any?', correct: true, question_id: questions[7].id },
-{ body: 'length', correct: true, question_id: questions[8].id },
-{ body: 'ActionController', correct: true, question_id: questions[9].id },
-{ body: 'public', correct: true, question_id: questions[10].id }
+{ body: 'compact', correct: true, question: questions[0] },
+{ body: 'first()', correct: true, question: questions[1] },
+{ body: 'length', correct: true, question: questions[2] },
+{ body: 'map', correct: true, question: questions[3] },
+{ body: 'min', correct: true, question: questions[4] },
+{ body: 'each', correct: true, question: questions[5] },
+{ body: 'empty?', correct: true, question: questions[6] },
+{ body: 'any?', correct: true, question: questions[7] },
+{ body: 'length', correct: true, question: questions[8] },
+{ body: 'ActionController', correct: true, question: questions[9] },
+{ body: 'public', correct: true, question: questions[10] },
+{ body: 'wrong answer', correct: false, question: questions[11] },
+{ body: 'another wrong answer', correct: false, question: questions[12] }
 ])
-=end
 
 results = Result.create!([
 { test: tests[0], user: users[1] },
@@ -62,4 +74,5 @@ results = Result.create!([
 { test: tests[5], user: users[1] },
 { test: tests[6], user: users[1] },
 { test: tests[3], user: users[1] },
-{ test: tests[2], user: users[2] }])
+{ test: tests[2], user: users[2] }
+])

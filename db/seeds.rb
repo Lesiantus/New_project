@@ -20,19 +20,19 @@ categories = Category.create!([
 ])
 
 tests = Test.create!([
-  { title: 'Arrays', level: 0, category: categories[0], author: users[0] },
+  { title: 'Arrays', level: 1, category: categories[0], author: users[0] },
   { title: 'Hashes', level: 1, category: categories[0], author: users[0] },
   { title: 'Controller', level: 2, category: categories[1], author: users[0] },
   { title: 'Model', level: 2, category: categories[1], author: users[0] },
   { title: 'Routing', level: 2, category: categories[1], author: users[0] },
-  { title: 'Integers', level: 0, category: categories[0], author: users[0] },
+  { title: 'Integers', level: 1, category: categories[0], author: users[0] },
   { title: 'Middle test', level: 2, category: categories[0], author: users[0] },
   { title: 'Middle test 2', level: 3, category: categories[0], author: users[0] },
   { title: 'Middle test 3', level: 4, category: categories[0], author: users[0] },
   { title: 'Hard test 1', level: 5, category: categories[0], author: users[0] },
   { title: 'Hard test 2', level: 6, category: categories[0], author: users[0] },
   { title: 'Hard test 3', level: 10, category: categories[0], author: users[0] },
-  { title: 'Strings', level: 0, category: categories[0], author: users[0] }
+  { title: 'Strings', level: 1, category: categories[0], author: users[0] }
 ])
 
 questions = Question.create!([
@@ -53,6 +53,9 @@ questions = Question.create!([
 
 answers = Answer.create!([
 { body: 'compact', correct: true, question: questions[0] },
+{ body: 'correct answer', correct: true, question: questions[0] },
+{ body: 'Test question', correct: true, question: questions[0] },
+{ body: 'Another test question', correct: true, question: questions[0] },
 { body: 'first()', correct: true, question: questions[1] },
 { body: 'length', correct: true, question: questions[2] },
 { body: 'map', correct: true, question: questions[3] },

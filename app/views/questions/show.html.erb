@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Вопрос</title>
+</head>
+<body>
+  <h1>вопрос</h1>
+  <h2>Тест <%=@question.test_id %>, Вопрос <%=@question.id %>: <%=@question.body %>'</h2>
+    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+  <td><%= link_to "удалить", question_path(@question), method: :delete %></td>
+</form>
+</body>
+</html>

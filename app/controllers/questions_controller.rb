@@ -23,7 +23,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    redirect_to question_url
+    redirect_to({ action: "index", test_id: @question.test_id })
   end
 
   private

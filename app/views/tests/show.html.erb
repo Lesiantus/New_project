@@ -32,4 +32,5 @@
 
 
 <%= link_to 'Редактировать тест', edit_test_path(@test) %><br>
-<%= link_to 'Назад', tests_path %>
+<%= link_to 'Добавить вопрос в тест', new_test_question_path(test_id: @test.id) %><br>
+<%= link_to 'К списку всех тестов', tests_path %>

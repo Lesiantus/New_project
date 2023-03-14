@@ -4,7 +4,7 @@
 </p>
 <p>
   <%= link_to 'Редактировать', edit_question_path %>
-  <%= link_to 'К списку вопросов теста', test_questions_path(@question.test) %>
+  <%= link_to 'К списку вопросов теста', test_path(@question.test) %>
   <%= link_to 'Удалить',
                   question_path(@question),
                   method: :delete,

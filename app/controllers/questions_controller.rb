@@ -1,16 +1,16 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[index create]
-  before_action :find_question, only: %i[show destroy]
+  before_action :find_test, only: %i[create new]
+  before_action :find_question, only: %i[show destroy edit update]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  def index
-    render inline: 'Все вопросы к тесту: <br> <%= @test.questions.pluck(:body) %>'
-  end
-
   def show; end
 
-  def new; end
+  def new
+    @question = @test.questions.build
+  end
+
+  def edit; end
 
   def create
     @question = @test.questions.build(question_params)
@@ -21,9 +21,17 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def update
+    if @question.update(question_params)
+      redirect_to @question
+    else
+      render :edit
+    end
+  end
+
   def destroy
     @question.destroy
-    redirect_to({ action: "index", test_id: @question.test_id })
+    redirect_to @question.test
   end
 
   private

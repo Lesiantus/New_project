@@ -1,11 +1,10 @@
-<% correct_quantity_to_count(@result) %>
-<% if result_header(@quantity) == true %>
+<% if @result.successfull? %>
 
-  <h2 style="color: green;"><%= "Тест #{@result.test.title} завершён , у вас #{@quantity.to_i}% правильных ответов" %></h2>
+  <h2 style="color: green;"><%= "Тест #{@result.test.title} завершён , у вас #{@result.success_count}% правильных ответов" %></h2>
 
 <% else %>
 
-  <h2 style="color: red;"><%= "Тест #{@result.test.title} не пройден у вас #{@quantity.to_i}% правильных ответов" %></h2>
+  <h2 style="color: red;"><%= "Тест #{@result.test.title} не пройден у вас #{@result.success_count}% правильных ответов" %></h2>
 
 <% end %>
 

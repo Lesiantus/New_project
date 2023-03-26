@@ -6,8 +6,10 @@ class User < ApplicationRecord
   has_many :tests, through: :results
 
   validates :email, presence: true, length: { maximum: 255 },
-                    format: { with: VALID_EMAIL_REGEX }
+                    format: { with: VALID_EMAIL_REGEX }, uniqueness: true
   validates :name, presence: true, length: { maximum: 50 }
+  has_secure_password
+  validates :password, length: { minimum: 6 }
 
   def tests_by_level(level)
     tests.where(level: level)

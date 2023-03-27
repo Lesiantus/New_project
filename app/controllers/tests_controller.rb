@@ -59,10 +59,6 @@ class TestsController < ApplicationController
     @questions = @test.questions
   end
 
-  def set_user
-    @user = current_user
-  end
-
   def rescue_with_test_not_found
     render plain: '404 Не найден!'
   end

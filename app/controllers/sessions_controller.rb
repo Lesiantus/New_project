@@ -15,6 +15,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session.delete(:user_id)
-    redirect_to login_path, notice: 'Successfully'
+    redirect_to login_path, alert: 'Успешно вышли из аккаунта'
   end
 end

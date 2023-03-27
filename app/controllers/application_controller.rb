@@ -21,8 +21,7 @@ class ApplicationController < ActionController::Base
   end
 
   def redirect_back_or(default)
-    redirect_to(session[:forwarding_url] || default)
-    session.delete(:forwarding_url)
+    redirect_to(session.delete(:forwarding_url) || default)
   end
 
   def store_location

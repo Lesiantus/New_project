@@ -1,5 +1,8 @@
 class SessionsController < Devise::SessionsController
-  after_action :custom_flash, only: :create
+  def create
+    super
+    custom_flash
+  end
 
   private
 

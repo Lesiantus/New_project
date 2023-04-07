@@ -1,10 +1,10 @@
 <% if user_signed_in? %>
-  <p class="nav user">Добро пожаловать, <b><%= current_user.first_name %></b>
+  <p class="nav user"><%=t('.welcome') %><b><%= current_user.first_name %></b>
   <%= link_to 'test_guru', root_path %></p>
-  <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+  <%= link_to t('.quit'), destroy_user_session_path, method: :delete %>
 <% else %>
   <p class="nav user">
-  <%= link_to 'Зарегистрироваться', new_user_registration_path %>
-  <%= link_to 'Войти', new_user_session_path %>
+  <%= link_to t('.register'), new_user_registration_path %>
+  <%= link_to t('.login'), new_user_session_path %>
   </p>
 <% end %>

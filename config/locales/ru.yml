@@ -1,2 +1,152 @@
 ru:
   hello: "Привет Мир!"
+
+  helpers:
+    select:
+      prompt: "Выберите категорию"
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+    footer:
+      github: "Мой гитхаб с проектом по созданию и прохождению тестов: https://github.com/%{author}/%{repo}"
+      owner_name: "Александр Казанцев"
+      year: "год"
+      project: "Учебный проект в онлайн школе Thinknetica"
+    navbar:
+      welcome: "Добро пожаловать, "
+      quit: "Выйти"
+      register: "Зарегистрироваться"
+      login: "Войти"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+      title: "Название теста"
+      level: "Уровень сложности"
+    test:
+      start: "Пройти тест"
+
+  results:
+    result:
+      header: "Тест %{title} завершён!"
+      success: "Тест %{test_name} пройден с %{percent}% правильных ответов!"
+      fail: "Тест %{test_name} не пройден, вы набрали лишь %{percent}% правильных ответов!"
+      back: "Назад"
+    show:
+      test_begin: "Прохождение теста %{title}"
+      question_number: "Вопрос № "
+      of: "из "
+      next: "Следующий"
+
+  admin:
+    tests:
+      create:
+        success: "Тест успешно создан!"
+      index:
+        header: "Все тесты"
+        create_new: "Создать тест"
+        title: "Название"
+        level: "Уровень"
+        actions: "Действия"
+      show:
+        name: "Название"
+        level: "уровень сложности "
+        author: "автор теста "
+        category: "категория заданий "
+        questions_count: "количество вопросов: "
+        test_questions: "вопросы к тесту "
+        edit: "редактировать"
+        add: "добавить вопрос"
+        list: "к списку тестов"
+      new:
+        new_test: "Создать новый тест"
+        back: "Назад"
+      edit:
+        edit: "Редактировать тест %{title}"
+        back: "Назад"
+      test:
+        show: "Просмотр |"
+        edit: "Редактировать |"
+        delete: "Удалить"
+        confirm: "Подтверждаете удаление?"
+    questions:
+      show:
+        question: "Вопрос"
+        answers: ""
+        add_answer: ""
+        edit: "Редактировать"
+        questions_list: "к списку вопросов"
+        delete: "удалить"
+        confirm: "подтвердите удаление"
+      new:
+        create: "Создать новый вопрос"
+        questions_list: "к списку вопросов теста"
+      edit:
+        questions_list: "к списку вопросов теста"
+      question:
+        show: "просмотр"
+        edit: "редактирование"
+        delete: "удалить"
+        confirm: "Подтверждаете удаление?"
+      form:
+        edit_question: "Редактировать вопрос в тесте %{title}"
+        add_question: "Добавить новый вопрос в тест %{title}"
+
+
+    nav:
+      panel: "Административная панель"
+      welcoming: "Здравствуйте, "
+      quit: "Выйти"
+
+  devise:
+    shared:
+      links:
+        log_in: "Войти"
+        sign_up: "Зарегистрироваться"
+        forgot_your_password?: "Забыли пароль?"
+        confirmation_instructions: "Не получили инструкций подтверждения?"
+    sessions:
+      new:
+        email: "Ваша почта"
+        password: "Пароль"
+        log_in: "Войти"
+        remember_me: "Запомнить меня"
+    registrations:
+      new:
+        register: "Зарегистрироваться"
+        first_name: "Имя"
+        last_name: "Фамилия"
+        email: "почта"
+        password: "пароль"
+        password_confirmation: "подтверждение пароля"
+        symbols_minimum: "символов минимум"
+        sign_up: "Зарегистрироваться"
+    mailer:
+      confirmation_instructions:
+        welcome: "Приветствуем %{email}!"
+        confirm: "Вы можете подтвердить свой аккаунт, перейдя по ссылке ниже "
+        confirm_account: "Подтвердить аккаунт"
+    confirmations:
+      new:
+        resend: "Отправить иснтрукцию снова"
+        email: "Почта"
+
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы завершили тест на TestGuru!"

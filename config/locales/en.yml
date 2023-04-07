@@ -31,3 +31,115 @@
 
 en:
   hello: "Hello world"
+
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+
+    label:
+      test:
+        title: "Title"
+        level: "level"
+        category_id: "Category"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+    footer:
+      github: "My github with project: https://github.com/%{author}/%{repo}"
+      owner_name: "Alexander Kazantsev"
+      year: "year"
+      project: "Educational project at the Thinknetica online school"
+    navbar:
+      welcome: "Welcome, "
+      quit: "Quit"
+      register: "Register"
+      login: "Login"
+
+  tests:
+    index:
+      header: "Available tests"
+      title: "test's title"
+      level: "test's difficulty level"
+    test:
+      start: "Start test"
+
+  results:
+    result:
+      header: "The %{title} Test was completed!"
+      success: "Test %{test_name} passed with %{percent}% correct answers!"
+      fail: "Test %{test_name} failed, you've got %{percent}% correct answers!"
+      back: "Back"
+    show:
+      test_begin: "Passing the %{title} test"
+      question_number: "Question № "
+      of: "of "
+      next: "Next"
+
+  admin:
+    tests:
+      create:
+        success: "Test was successfully created!"
+      index:
+        header: "Test list"
+        create_new: "Create new test"
+        title: "Title"
+        level: "Level"
+        actions: "Actions"
+      show:
+        name: "Test title"
+        level: "difficulty level "
+        author: "author "
+        category: "category "
+        questions_count: "questions count: "
+        test_questions: "list of questions "
+        edit: "edit"
+        add: "add question"
+        list: "list of all tests"
+      new:
+        new_test: "Create new test"
+        back: "Back"
+      edit:
+        edit: "Edit test %{title}"
+        back: "Back"
+      test:
+        confirm: "Delete this test?"
+    questions:
+      show:
+        confirm: "Are you sure?"
+      question:
+        confirm: "Are you sure?"
+      form:
+        edit_question: "Edit question in test %{title}"
+        add_question: "Add new question in test %{title}"
+    nav:
+      panel: "Administrative panel"
+      welcoming: "Welcome, "
+      quit: "Quit"
+
+  devise:
+    shared:
+      links:
+        confirmation_instructions: "Didn't receive confirmation instructions?"
+    sessions:
+      new:
+        log_in: "Log in"
+    registrations:
+      new:
+        sign_up: "Sign up"
+    mailer:
+      confirmation_instructions:
+        welcome: "Welcome %{email}!"
+        confirm: "You can confirm your account email through the link below"
+        confirm_account: "Confirm my account"
+    confirmations:
+      new:
+        resend: "Resend confirmation instructions"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"

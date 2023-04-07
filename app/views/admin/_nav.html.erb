@@ -1,8 +1,8 @@
 <div class="nav nav-admin">
-  <span class "nav-admin title">Административная панель</span>
+  <span class "nav-admin title"><%= t('.panel') %></span>
 
   <div class="nav-admin user">
-    Приветствуем, <b class="nav-admin user-email"><%= current_user.first_name %></b>  |
-    <%= link_to 'Выход', destroy_user_session_path, method: :delete %>
+    <%= t('.welcoming') %> <b class="nav-admin user-email"><%= current_user.first_name %></b>  |
+    <%= link_to t('.quit'), destroy_user_session_path, method: :delete %>
   </div>
 </div>

@@ -57,3 +57,6 @@ ru:
       unlock_instructions:
         subject: "Инструкции по разблокировке учётной записи"
 
+  tests:
+    index:
+      header: "Доступные тесты"

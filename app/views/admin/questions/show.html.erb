@@ -1,21 +1,21 @@
 <p>
-  <strong>Вопрос:</strong><br>
+  <strong><%= t('.question') %></strong><br>
   <%= @question.body %>
 </p>
 
-<h2>Ответы</h2>
+<h2><%= t('.answers') %></h2>
 
-<%= link_to 'Добавить ответ', new_admin_question_answer_path(@question) %>
+<%= link_to t('.add_answer'), new_admin_question_answer_path(@question) %>
 <ol>
   <%= render @question.answers %>
 </ol>
 <p>
-  <%= link_to 'Редактировать', edit_admin_question_path %>
-  <%= link_to 'К списку вопросов теста', admin_test_path(@question.test) %>
-  <%= link_to 'Удалить',
+  <%= link_to t('.edit'), edit_admin_question_path %>
+  <%= link_to t('.questions_list'), admin_test_path(@question.test) %>
+  <%= link_to t('.delete'),
                   admin_question_path(@question),
                   method: :delete,
-                  data: { confirm: 'Подтверждение удаления' } %>
+                  data: { confirm: t('.confirm') } %>
 </p>
 
 

@@ -1,0 +1,37 @@
+<p>
+  <strong>Название:</strong>
+  <%= @test.title %>
+</p>
+
+<p>
+  <strong>Уровень:</strong>
+  <%= @test.level %>
+</p>
+
+<p>
+  <strong>Автор:</strong>
+  <%= @test.author.first_name %>
+  <%= @test.author.last_name %>
+</p>
+
+<p>
+  <strong>Категория:</strong>
+  <%= @test.category.title %>
+</p>
+
+<p>
+  <strong>Количество вопросов к тесту:</strong>
+  <%= @test.questions.count %>
+</p>
+
+<p>
+  <strong>Вопросы к тесту:</strong>
+  <table>
+  <%= render partial: 'admin/questions/question', collection: @test.questions %>
+  </table>
+</p>
+
+
+<%= link_to 'Редактировать тест', edit_admin_test_path(@test) %><br>
+<%= link_to 'Добавить вопрос в тест', new_admin_test_question_path(test_id: @test.id) %><br>
+<%= link_to 'К списку всех тестов', admin_tests_path %>

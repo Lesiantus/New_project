@@ -1,20 +1,12 @@
-class SessionsController < ApplicationController
-  def new; end
-
+class SessionsController < Devise::SessionsController
   def create
-    user = User.find_by(email: params[:email])
-
-    if user&.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_back_or tests_path
-    else
-      flash.now[:alert] = 'Verify your Email and Password please'
-      render :new
-    end
+    super
+    custom_flash
   end
 
-  def destroy
-    session.delete(:user_id)
-    redirect_to login_path, alert: 'Успешно вышли из аккаунта'
+  private
+
+  def custom_flash
+    flash[:notice] = "Привет, #{current_user.first_name}"
   end
 end

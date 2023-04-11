@@ -8,6 +8,7 @@ module ApplicationHelper
   end
 
   def flash_message(type)
-    content_tag :p, flash[type], class: "flash #{type}" if flash[type]
+    { notice: 'alert-info',
+      alert: 'alert-danger' }[type.to_sym]
   end
 end

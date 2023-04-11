@@ -1,6 +1,6 @@
 <div align="left">
-    <%= current_year %> год
-    <h3>Александр Казанцев</h3>
+    <%= current_year %> <%= t('.year') %>
+    <h3><%= t('.owner_name') %></h3>
     <li><%= github_url("Lesiantus", "New_project") %></li>
-    <li><%= link_to 'Учебный проект в онлайн школе Thinknetica', 'https://thinknetica.com', target: '_blank' %></li>
+    <li><%= link_to t('.project'), 'https://thinknetica.com', target: '_blank' %></li>
 </div>

@@ -1,4 +1,4 @@
-<h1>Создать новый вопрос</h1>
+<h1><%= t('.create') %></h1>
 
 <%= render 'form' %>
-<%= link_to 'К списку вопросов теста', admin_test_path(@test) %>
+<%= link_to t('.questions_list'), admin_test_path(@test) %>

@@ -1,37 +1,37 @@
 <p>
-  <strong>Название:</strong>
+  <strong><%= t('.name') %></strong>
   <%= @test.title %>
 </p>
 
 <p>
-  <strong>Уровень:</strong>
+  <strong><%= t('.level') %></strong>
   <%= @test.level %>
 </p>
 
 <p>
-  <strong>Автор:</strong>
+  <strong><%= t('.author') %></strong>
   <%= @test.author.first_name %>
   <%= @test.author.last_name %>
 </p>
 
 <p>
-  <strong>Категория:</strong>
+  <strong><%= t('.category') %></strong>
   <%= @test.category.title %>
 </p>
 
 <p>
-  <strong>Количество вопросов к тесту:</strong>
+  <strong><%= t('.questions_count') %></strong>
   <%= @test.questions.count %>
 </p>
 
 <p>
-  <strong>Вопросы к тесту:</strong>
+  <strong><%= t('.test_questions') %></strong>
   <table>
   <%= render partial: 'admin/questions/question', collection: @test.questions %>
   </table>
 </p>
 
 
-<%= link_to 'Редактировать тест', edit_admin_test_path(@test) %><br>
-<%= link_to 'Добавить вопрос в тест', new_admin_test_question_path(test_id: @test.id) %><br>
-<%= link_to 'К списку всех тестов', admin_tests_path %>
+<%= link_to t('.edit'), edit_admin_test_path(@test) %><br>
+<%= link_to t('.add'), new_admin_test_question_path(test_id: @test.id) %><br>
+<%= link_to t('.list'), admin_tests_path %>

@@ -1,14 +1,16 @@
+<h1><%= t('.header', title: @result.test.title) %></h1>
+
 <% if @result.successfull? %>
 
-  <h2 style="color: green;"><%= "Тест #{@result.test.title} завершён , у вас #{@result.success_count}% правильных ответов" %></h2>
+  <h2 style="color: green;"><%= t('.success', test_name: @result.test.title, percent: @result.success_count) %></h2>
 
 <% else %>
 
-  <h2 style="color: red;"><%= "Тест #{@result.test.title} не пройден у вас #{@result.success_count}% правильных ответов" %></h2>
+  <h2 style="color: red;"><%= t('.fail', test_name: @result.test.title, percent: @result.success_count) %></h2>
 
 <% end %>
 
-<%= link_to 'Назад', tests_path %>
+<%= link_to t('.back'), tests_path %>
 
 
 

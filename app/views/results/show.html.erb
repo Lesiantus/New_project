@@ -1,7 +1,7 @@
-<h1>Пройти тест <%= @result.test.title %></h1>
+<h1><%= t('.test_begin', title: @result.test.title) %></h1>
 
 <p>
-  Вопрос <%= @result.test.questions.order(id: :asc).find_index(@result.current_question) + 1 %> / из <%= @result.test.questions.count %>
+  <%= t('.question_number') %> <%= @result.test.questions.order(id: :asc).find_index(@result.current_question) + 1 %> / <%= t('.of') %><%= @result.test.questions.count %>
 </p>
 
 <b>
@@ -16,5 +16,5 @@
     </p>
   <% end %>
 
-  <p><%= form.submit 'Следующий' %></p>
+  <p><%= form.submit t('.next') %></p>
 <% end %>

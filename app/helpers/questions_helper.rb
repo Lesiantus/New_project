@@ -1,9 +1,9 @@
 module QuestionsHelper
   def question_header(question)
     if question.persisted?
-      "Редактировать вопрос в тесте #{question.test.title} "
+      t('.edit_question', title: question.test.title)
     else
-      "Добавить новый вопрос в тест #{question.test.title}"
+      t('.add_question', title: question.test.title)
     end
   end
 end

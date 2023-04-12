@@ -1,8 +1,8 @@
-<div class="nav nav-admin">
-  <span class "nav-admin title"><%= t('.panel') %></span>
+<nav class="nav nav-admin">
+  <div class="nav-admin title"><%= t('.panel') %>&nbsp;<%= link_to t('shared.navbar.TestGuru'), root_path %></div>
 
   <div class="nav-admin user">
-    <%= t('.welcoming') %> <b class="nav-admin user-email"><%= current_user.first_name %></b>  |
-    <%= link_to t('.quit'), destroy_user_session_path, method: :delete %>
+    <%= t('.welcoming') %>&emsp;<b class="nav-admin user-email"><%= current_user.first_name %></b>
+    <%= button_to t('.quit'), destroy_user_session_path, method: :delete, class: 'btn btn-primary' %>
   </div>
-</div>
+</nav>

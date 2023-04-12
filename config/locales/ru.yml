@@ -28,10 +28,11 @@ ru:
       year: "год"
       project: "Учебный проект в онлайн школе Thinknetica"
     navbar:
-      welcome: "Добро пожаловать, "
+      welcome: "Добро пожаловать,"
       quit: "Выйти"
       register: "Зарегистрироваться"
-      login: "Войти"
+      login: " Войти"
+      TestGuru: "Тест Гуру"
 
   tests:
     index:
@@ -80,8 +81,8 @@ ru:
         edit: "Редактировать тест %{title}"
         back: "Назад"
       test:
-        show: "Просмотр |"
-        edit: "Редактировать |"
+        show: "Просмотр"
+        edit: "Редактировать"
         delete: "Удалить"
         confirm: "Подтверждаете удаление?"
     questions:

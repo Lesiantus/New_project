@@ -53,6 +53,12 @@ ru:
       question_number: "Вопрос № "
       of: "из "
       next: "Следующий"
+      gist_question: "Задать вопрос в Gist"
+  gists:
+    description: "Вопрос теста %{title}"
+    create:
+      success: "Gist успешно создан! Ссылка на гист: %{new_gist}"
+      failure: "Во время сохранения gist произошла ошибка"
 
   admin:
     tests:
@@ -107,12 +113,20 @@ ru:
       form:
         edit_question: "Редактировать вопрос в тесте %{title}"
         add_question: "Добавить новый вопрос в тест %{title}"
+    gists:
+      index:
+        all_gists: "Все созданные гисты"
+        question: "Вопрос"
+        url: "Ссылка на гист"
+        user: "Создавший пользователь"
+
 
 
     nav:
       panel: "Административная панель"
       welcoming: "Здравствуйте, "
       quit: "Выйти"
+      gists: "Таблица всех gist"
 
   devise:
     shared:

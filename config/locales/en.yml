@@ -79,6 +79,10 @@ en:
       question_number: "Question № "
       of: "of "
       next: "Next"
+      gist_question: "Ask question via Gist"
+    gist:
+      success: "Gist was successfully created! Link to gist: %{new_gist}"
+      failure: "An error occured while saving gist"
 
   admin:
     tests:
@@ -120,6 +124,7 @@ en:
       panel: "Administrative panel"
       welcoming: "Welcome, "
       quit: "Quit"
+      gists: "Table of all gists"
 
   devise:
     shared:

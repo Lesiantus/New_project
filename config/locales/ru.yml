@@ -1,9 +1,6 @@
 ru:
   hello: "Привет Мир!"
 
-  gists:
-    description: "Вопрос теста %{title}"
-
   helpers:
     select:
       prompt: "Выберите категорию"
@@ -57,7 +54,9 @@ ru:
       of: "из "
       next: "Следующий"
       gist_question: "Задать вопрос в Gist"
-    gist:
+  gists:
+    description: "Вопрос теста %{title}"
+    create:
       success: "Gist успешно создан! Ссылка на гист: %{new_gist}"
       failure: "Во время сохранения gist произошла ошибка"
 

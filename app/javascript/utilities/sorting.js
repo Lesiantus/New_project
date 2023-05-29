@@ -1,45 +1,41 @@
 document.addEventListener('turbolinks:load', function() {
-  var control = document.querySelector('.sort-by-title')
+  const control = document.querySelector('.sort-by-title')
 
   if (control) {control.addEventListener('click', sortRowsByTitle)}
 })
 
 function sortRowsByTitle() {
-  var table = document.querySelector('tbody')
+  const table = document.querySelector('tbody')
 
   // NodeList
   // https://developer.mozilla.org/ru/docs/Web/API/NodeList
 
-  var rows = table.querySelectorAll('tr')
-  var sortedRows = []
+  const rows = table.querySelectorAll('tr')
+  const sortedRows = []
+  const arrowUp = this.querySelector('.octicon-arrow-up').classList
+  const arrowDown = this.querySelector('.octicon-arrow-down').classList
 
   // select all atable rows except the first one which is header
-  for (var i = 1; i < rows.length; i++) {
+  for (let i = 1; i < rows.length; i++) {
     sortedRows.push(rows[i])
   }
 
-//  var arrowUp = this.querySelector('.octicon-arrow-up')
-
-//  console.log(arrowUp)
-
-//  sortedRows.sort(compareRowsAsc)
-
-  if(this.querySelector('.octicon-arrow-up').classList.contains('hide')) {
+  if(arrowUp.contains('hide')) {
     sortedRows.sort(compareRowsAsc)
-    this.querySelector('.octicon-arrow-up').classList.remove('hide')
-    this.querySelector('.octicon-arrow-down').classList.add('hide')
+    arrowUp.remove('hide')
+    arrowDown.add('hide')
   } else {
     sortedRows.sort(compareRowsDesc)
-    this.querySelector('.octicon-arrow-up').classList.add('hide')
-    this.querySelector('.octicon-arrow-down').classList.remove('hide')
+    arrowUp.add('hide')
+    arrowDown.remove('hide')
   }
 
-  var sortedTable = document.createElement('tbody')
+  const sortedTable = document.createElement('tbody')
 
   sortedTable.classList.add('tbody')
   sortedTable.appendChild(rows[0])
 
-  for (var i = 0; i < sortedRows.length; i++) {
+  for (let i = 0; i < sortedRows.length; i++) {
     sortedTable.appendChild(sortedRows[i])
   }
 
@@ -47,8 +43,8 @@ function sortRowsByTitle() {
 }
 
 function compareRowsAsc(row1, row2) {
-  var testTitle1 = row1.querySelector('td').textContent
-  var testTitle2 = row2.querySelector('td').textContent
+  const testTitle1 = row1.querySelector('td').textContent
+  const testTitle2 = row2.querySelector('td').textContent
 
   if (testTitle1 < testTitle2) { return -1 }
   if (testTitle1 > testTitle2) { return 1 }
@@ -56,8 +52,8 @@ function compareRowsAsc(row1, row2) {
 }
 
 function compareRowsDesc(row1, row2) {
-  var testTitle1 = row1.querySelector('td').textContent
-  var testTitle2 = row2.querySelector('td').textContent
+  const testTitle1 = row1.querySelector('td').textContent
+  const testTitle2 = row2.querySelector('td').textContent
 
   if (testTitle1 < testTitle2) { return 1 }
   if (testTitle1 > testTitle2) { return -1 }

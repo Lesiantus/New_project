@@ -13,8 +13,8 @@ class PasswordChecker {
 
   checkPassword() {
     if (this.confirmation.value == '') {
-      this.hideElement(this.match);
-      this.hideElement(this.notMatch);
+      this.elementHide(this.match);
+      this.elementHide(this.notMatch);
     }
     else if (this.confirmation.value == this.password.value) {
       this.elementShow(this.match);

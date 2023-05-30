@@ -1,38 +1,39 @@
-document.addEventListener('turbolinks:load', function () {
-  const control = document.querySelector('.check-pass');
 
-    if (control)
-      passwordCheck(control)
-});
-
-function passwordCheck(control) {
-  const password = document.getElementById('user_password');
-  const confirmation = control.querySelector('.form-control');
-  const match = control.querySelector('.octicon-check-circle-fill').classList;
-  const notMatch = control.querySelector('.octicon-x-circle-fill').classList;
-
-  confirmation.addEventListener('input', function () {
-
-
-    if (confirmation.value == '') {
-      elementHide(match);
-      elementHide(notMatch);
+class PasswordChecker {
+  constructor() {
+    this.control = document.querySelector('.check-pass');
+    if (this.control) {
+      this.password = document.getElementById('user_password');
+      this.confirmation = this.control.querySelector('.form-control');
+      this.match = this.control.querySelector('.octicon-check-circle-fill').classList;
+      this.notMatch = this.control.querySelector('.octicon-x-circle-fill').classList;
+      this.confirmation.addEventListener('input', this.checkPassword.bind(this));
     }
-    else if (confirmation.value == password.value) {
-      elementShow(match);
-      elementHide(notMatch);
+  }
+
+  checkPassword() {
+    if (this.confirmation.value == '') {
+      this.hideElement(this.match);
+      this.hideElement(this.notMatch);
+    }
+    else if (this.confirmation.value == this.password.value) {
+      this.elementShow(this.match);
+      this.elementHide(this.notMatch);
     }
     else {
-      elementHide(match);
-      elementShow(notMatch);
+      this.elementHide(this.match);
+      this.elementShow(this.notMatch);
     }
-  })
+  }
+
+  elementHide(element) {
+    element.add('hide');
+  }
+  elementShow(element) {
+    element.remove('hide');
+  }
 }
 
-function elementHide(element) {
-  element.add('hide')
-}
-
-function elementShow(element) {
-  element.remove('hide')
-}
+document.addEventListener('turbolinks:load', function() {
+  new PasswordChecker();
+});

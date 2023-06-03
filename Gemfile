@@ -13,6 +13,7 @@ gem 'rails-i18n'
 
 gem 'bootstrap', '~> 5.2.2'
 gem 'jquery-rails'
+gem 'octicons_helper'
 
 # Use Puma as the app server
 gem 'puma', '~> 5.0'

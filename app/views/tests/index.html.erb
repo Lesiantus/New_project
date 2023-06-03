@@ -4,9 +4,13 @@
     <div class="col-12">
       <table class="table table-bordered border-primary">
         <tr>
+          <th class="sort-by-title pointer">
+            <%= t('.title') %>
+              <%= octicon 'arrow-up', class: 'text-success hide' %>
+              <%= octicon 'arrow-down', class: 'text-success hide' %>
+            </th>
           <th><%= t('.title') %></th>
           <th><%= t('.level') %></th>
-          <th></th>
         </tr>
 
         <%= render @tests %>

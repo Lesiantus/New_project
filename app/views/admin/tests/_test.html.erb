@@ -3,7 +3,6 @@
   <td class="align-middle">
     <%= content_tag :span, test.title, class: 'test-title',
                     data: { test_id: test.id } %>
-    <%= test_level(test) %>
     <%= render 'form_inline', test: test == @test ? @test : test %>
   </td>
   <td class="align-middle"><%= test_level(test) %></td>

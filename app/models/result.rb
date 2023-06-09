@@ -24,6 +24,22 @@ class Result < ApplicationRecord
     100 / test.questions.count * correct_question
   end
 
+  def question_num
+    test.questions.order(id: :asc).find_index(current_question) + 1
+  end
+
+  def progress
+    (((current_question_number - 1).to_f / total_questions) * 100).to_i
+  end
+
+  def current_question_number
+    test.questions.index(current_question) + 1
+  end
+
+  def total_questions
+    test.questions.count
+  end
+
   private
 
   def set_current_question

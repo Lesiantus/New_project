@@ -1,7 +1,8 @@
 
 <div class="row justify-content-center mt-3">
-  <div class="col col-md-4"><h1><%= t('.test_begin', title: @result.test.title) %></h1>
-
+  <div class="col col-md-4"><h1><%= t('.test_begin', title: @result.test.title) %>
+  </h1>
+  <%= render 'form_progress_bar', resource: @result %>
       <p>
         <%= t('.question_number') %> <%= @result.test.questions.order(id: :asc).find_index(@result.current_question) + 1 %> / <%= t('.of') %><%= @result.test.questions.count %>
       </p>

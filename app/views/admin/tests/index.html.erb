@@ -5,6 +5,8 @@
       <%= button_to t('.create_new'), new_admin_test_path, method: :get, class: 'btn btn-primary'
        %>
     </p>
+    <%= render 'shared/errors', resource: @test %>
+
 
     <div class="col-12">
       <table class="table table-bordered border-primary">
@@ -13,12 +15,11 @@
             <%= t('.title') %>
               <%= octicon 'arrow-up', class: 'text-success hide' %>
               <%= octicon 'arrow-down', class: 'text-success hide' %>
-            </th>
+          </th>
           <th><%= t('.level') %></th>
           <th colspan="4"><%= t('.actions') %></th>
         </tr>
-
-      <%= render @tests %>
+        <%= render @tests %>
 
     </table>
   </div>

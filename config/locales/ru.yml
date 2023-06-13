@@ -54,6 +54,8 @@ ru:
       of: "из "
       next: "Следующий"
       gist_question: "Задать вопрос в Gist"
+    form_progress_bar:
+      percent: "Процент завершенных вопросов: "
   gists:
     description: "Вопрос теста %{title}"
     create:
@@ -91,6 +93,8 @@ ru:
         edit: "Редактировать"
         delete: "Удалить"
         confirm: "Подтверждаете удаление?"
+      form_inline:
+        submit: "Подтвердить"
     questions:
       show:
         question: "Вопрос"

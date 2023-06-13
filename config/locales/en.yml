@@ -80,6 +80,8 @@ en:
       of: "of "
       next: "Next"
       gist_question: "Ask question via Gist"
+    form_progress_bar:
+      percent: "Percent of complited questions: "
     gist:
       success: "Gist was successfully created! Link to gist: %{new_gist}"
       failure: "An error occured while saving gist"

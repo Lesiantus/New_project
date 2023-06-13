@@ -1,0 +1,7 @@
+<%= t('.percent') %>
+<div class="all-test">
+  <%= content_tag :div,
+                  @result.progress,
+                  class: 'progress-bar',
+                  data: { bar_width: @result.progress } %>
+</div>

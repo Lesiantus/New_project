@@ -1,18 +1,18 @@
 databases:
-  - name: new_project
-    databaseName: new_project
-    user: new_project
+  - name: new_app
+    databaseName: new_app
+    user: new_app
 
 services:
   - type: web
-    name: new_project
+    name: new_app
     runtime: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: new_project
+          name: new_app
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false

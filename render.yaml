@@ -4,7 +4,6 @@ databases:
     user: new_app
 
 services:
-  - type: web
     name: new_app
     runtime: ruby
     buildCommand: "./bin/render-build.sh"

@@ -1,0 +1,9 @@
+<%= form_with model: @feedback, local: true do |form| %>
+  <%= render 'shared/errors', resource: @feedback %>
+  <p>
+    <%= form.label t('.message') %><br>
+    <%= form.text_field :message, value: @feedback.message %>
+  </p><br>
+
+  <p><%= form.submit name=t('.create_feedback') %></p>
+<% end %>

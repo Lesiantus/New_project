@@ -27,6 +27,7 @@ ru:
       owner_name: "Александр Казанцев"
       year: "год"
       project: "Учебный проект в онлайн школе Thinknetica"
+      feedback: "Оставить отзыв"
     navbar:
       welcome: "Добро пожаловать,"
       quit: "Выйти"
@@ -41,6 +42,17 @@ ru:
       level: "Уровень сложности"
     test:
       start: "Пройти тест"
+
+  feedbacks:
+    new:
+      feedback: 'Оставить отзыв'
+      back: 'Назад'
+      feedback_created: 'Новый отзыв на сайте!'
+    form:
+      create_feedback: 'Добавить отзыв'
+      message: 'Введите отзыв: '
+    create:
+      feedback_created: 'Отзыв успешно добавлен!'
 
   results:
     result:

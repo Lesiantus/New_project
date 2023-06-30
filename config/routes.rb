@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root 'tests#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
+  resources :feedbacks, only: %i[new create]
+
   resources :tests, only: :index do
     post :start, on: :member
   end

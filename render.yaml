@@ -4,7 +4,8 @@ databases:
     user: new_app
 
 services:
-    name: new_app
+  - type: web
+    name: rails
     runtime: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"

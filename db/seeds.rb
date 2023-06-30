@@ -5,11 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-users = User.create!([
-  { first_name: "Alexander", last_name: "Kazantsev", email: "sashkabonan@gmail.com", password: "123123", type: "Admin" },
-  { first_name: "Dmitriy", last_name: "Ivanovitch", email: "lesiantus@yandex.ru", password: "123123" } ])
+#users = User.create!([
+  #{ first_name: "Alexander", last_name: "Kazantsev", email: "sashkabonan@gmail.com", password: "123123", type: "Admin" },
+  #{ first_name: "Dmitriy", last_name: "Ivanovitch", email: "lesiantus@yandex.ru", password: "123123" } ])
   #{ first_name: "Vasiliy", last_name: "Vasilievitch", email: "example2@mail.org", password: "123123" },
   #{ first_name: "Georgiy", last_name: "Dobrovitch", email: "example3@mail.org", password: "123123"} ])
+if Admin.all.empty?
+  admin = Admin.new(first_name: 'Alexander', last_name: 'Kazantsev', username: 'admin', email: 'sashkabonan@gmail.com',
+                    password: 'qwerty')
+  admin.skip_confirmation!
+  admin.save!
+end
 
 categories = Category.create!([
   { title: 'Ruby' },

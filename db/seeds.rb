@@ -11,7 +11,7 @@
   #{ first_name: "Vasiliy", last_name: "Vasilievitch", email: "example2@mail.org", password: "123123" },
   #{ first_name: "Georgiy", last_name: "Dobrovitch", email: "example3@mail.org", password: "123123"} ])
 if Admin.all.empty?
-  admin = Admin.new(first_name: 'Alexander', last_name: 'Kazantsev', username: 'admin', email: 'sashkabonan@gmail.com',
+  admin = Admin.new(first_name: 'Alexander', last_name: 'Kazantsev', email: 'sashkabonan@gmail.com',
                     password: 'qwerty')
   admin.skip_confirmation!
   admin.save!

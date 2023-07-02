@@ -1,10 +1,9 @@
 <div class="row justify-content-center mt-3">
   <div class="col col-md-4"><h1><%= t('.question') %></h1>
     <%= @question.body %>
-
-      <h2><%= t('.answers') %></h2>
-
+    <p>
       <%= link_to t('.add_answer'), new_admin_question_answer_path(@question) %>
+    </p>
       <ol>
         <%= render @question.answers %>
       </ol>

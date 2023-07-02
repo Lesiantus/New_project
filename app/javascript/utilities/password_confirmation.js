@@ -7,7 +7,8 @@ class PasswordChecker {
       this.confirmation = this.control.querySelector('.form-control');
       this.match = this.control.querySelector('.octicon-check-circle-fill').classList;
       this.notMatch = this.control.querySelector('.octicon-x-circle-fill').classList;
-      this.confirmation.addEventListener('input', this.checkPassword.bind(this));
+      this.listener = document.querySelector('.new_user')
+      this.listener.addEventListener('input', this.checkPassword.bind(this));
     }
   }
 

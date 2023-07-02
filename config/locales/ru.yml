@@ -42,6 +42,8 @@ ru:
       level: "Уровень сложности"
     test:
       start: "Пройти тест"
+    start:
+      test_in_edit: "Приносим извинения, тест еще в разработке."
 
   feedbacks:
     new:
@@ -111,7 +113,7 @@ ru:
       show:
         question: "Вопрос"
         answers: ""
-        add_answer: ""
+        add_answer: "Добавить ответ"
         edit: "Редактировать"
         questions_list: "к списку вопросов"
         delete: "удалить"

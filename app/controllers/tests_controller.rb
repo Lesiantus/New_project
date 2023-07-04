@@ -9,8 +9,13 @@ class TestsController < ApplicationController
   end
 
   def start
-    current_user.tests.push(@test)
-    redirect_to current_user.result(@test)
+    if @test.questions.count.zero?
+      redirect_to root_path
+      flash[:notice] = t('.test_in_edit')
+    else
+      current_user.tests.push(@test)
+      redirect_to current_user.result(@test)
+    end
   end
 
   private

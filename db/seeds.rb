@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 users = User.create!([
-  { first_name: "Ilya", last_name: "Dobryi", email: "example@mail.org", password: "123123", type: "Admin" },
-  { first_name: "Dmitriy", last_name: "Ivanovitch", email: "example1@mail.org", password: "123123" },
-  { first_name: "Vasiliy", last_name: "Vasilievitch", email: "example2@mail.org", password: "123123" },
-  { first_name: "Georgiy", last_name: "Dobrovitch", email: "example3@mail.org", password: "123123"} ])
+  { first_name: "Alexander", last_name: "Kazantsev", email: "sashkabonan@gmail.com", password: "123123", type: "Admin" },
+  { first_name: "Dmitriy", last_name: "Ivanovitch", email: "lesiantus@yandex.ru", password: "123123" } ])
+  #{ first_name: "Vasiliy", last_name: "Vasilievitch", email: "example2@mail.org", password: "123123" },
+  #{ first_name: "Georgiy", last_name: "Dobrovitch", email: "example3@mail.org", password: "123123"} ])
 
 categories = Category.create!([
   { title: 'Ruby' },
@@ -70,12 +70,12 @@ answers = Answer.create!([
 { body: 'another wrong answer', correct: false, question: questions[12] }
 ])
 
-results = Result.create!([
-{ test: tests[0], user: users[1] },
-{ test: tests[1], user: users[1] },
-{ test: tests[4], user: users[1] },
-{ test: tests[5], user: users[1] },
-{ test: tests[6], user: users[1] },
-{ test: tests[3], user: users[1] },
-{ test: tests[2], user: users[2] }
-])
+#results = Result.create!([
+#{ test: tests[0], user: users[0] },
+#{ test: tests[1], user: users[0] },
+#{ test: tests[4], user: users[0] },
+#{ test: tests[5], user: users[0] },
+#{ test: tests[6], user: users[1] },
+#{ test: tests[3], user: users[1] },
+#{ test: tests[2], user: users[1] }
+#])

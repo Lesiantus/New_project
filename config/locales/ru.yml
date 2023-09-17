@@ -34,6 +34,8 @@ ru:
       register: "Зарегистрироваться"
       login: " Войти"
       TestGuru: "Тест Гуру"
+      Userbadges: " Полученные значки"
+      BadgesList: "Список доступных наград"
 
   tests:
     index:
@@ -75,8 +77,46 @@ ru:
     create:
       success: "Gist успешно создан! Ссылка на гист: %{new_gist}"
       failure: "Во время сохранения gist произошла ошибка"
+  user_badges:
+    index:
+      back: "Назад к списку тестов"
+      head: "Полученные бэйджи"
+      rule: "За что выдан"
+      badge: "Награда"
+  badges:
+    index:
+      header: "Таблица всех наград"
+      image: "Картиночка"
+      title: "Название"
+      rule: "Правило присваивания"
+      back: "назад"
 
   admin:
+    badges:
+      badge:
+        show: "Просмотр"
+        edit: "Редактировать"
+        delete: "Удалить"
+      form:
+        submit: "Подтвердить"
+      show:
+        title: "Название бэйджа"
+        edit: "Редактировать"
+        back: "Назад"
+        rule: "Правило"
+        new: "Создать еще бэйдж"
+      edit:
+        back: "назад"
+      index:
+        header: "Таблица всех наград"
+        new_badge: "Добавить новый бэйдж"
+        image_path: "Картиночка"
+        title: "Название"
+        rule: "Правило присваивания"
+        actions: "Действия"
+      new:
+        back: "Назад"
+        create_badge: "Создать новый бэйдж"
     tests:
       create:
         success: "Тест успешно создан!"
@@ -145,6 +185,7 @@ ru:
       welcoming: "Здравствуйте, "
       quit: "Выйти"
       gists: "Таблица всех gist"
+      badges: "Таблица бэйджей"
 
   devise:
     shared:

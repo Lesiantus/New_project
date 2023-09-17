@@ -5,6 +5,8 @@
       <div class="navbar-brand"><%= link_to t('admin.nav.panel'), admin_tests_path if current_user.is_a?(Admin) %></div>
         <p class="nav user"><%=t('.welcome') %>&emsp;<b><%= current_user.first_name %>&emsp;</b>
         <%= link_to t('shared.navbar.TestGuru'), root_path %></p>
+        <%= link_to t('shared.navbar.Userbadges'), user_badges_path %></p>
+        <%= link_to t('shared.navbar.BadgesList'), badges_path %></p>
         <%= button_to t('.quit'), destroy_user_session_path, method: :delete, class:'btn btn-primary'  %>
     <% else %>
       <p class="nav user">

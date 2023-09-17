@@ -15,6 +15,8 @@ class User < ApplicationRecord
   has_many :tests, through: :results
   has_many :gists, dependent: :destroy
   has_many :feedbacks
+  has_many :user_badges, dependent: :destroy
+  has_many :badges, through: :user_badges
 
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX }, uniqueness: true

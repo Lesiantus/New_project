@@ -16,6 +16,12 @@ Rails.application.routes.draw do
       resources :gists, only: :create
     end
   end
+  resources :badges, only: :index do
+    get :index, on: :collection
+  end
+  resources :user_badges, only: :index do
+    get :index, on: :collection
+  end
 
   namespace :admin do
     resources :tests do
@@ -25,5 +31,6 @@ Rails.application.routes.draw do
       end
     end
     resources :gists
+    resources :badges
   end
 end

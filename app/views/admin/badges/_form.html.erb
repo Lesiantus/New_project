@@ -14,12 +14,10 @@
     <%= form.label :rule %>
     <%= form.select :rule, options_for_select(rules, @badge.rule) %>
   </p>
+
   <p>
-    <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true, class: "form-control" %>
-  </p>
-  <p>
-    <%= form.label :level %>
-    <%= form.number_field :level, id: :test_level, class: "form-control" %>
+    <%= form.label :value %>
+    <%= form.text_field :value, id: :badge_rule %>
   </p>
   <p><%= form.submit t('.submit')%></p>
 <% end %>

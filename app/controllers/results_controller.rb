@@ -11,7 +11,7 @@ class ResultsController < ApplicationController
 
     if @result.completed?
       @result.success!
-      current_user.badges.concat(BadgeService.new(@result).select_badges)
+      BadgeService.new(@result).select_badges
       TestsMailer.completed_test(@result).deliver_now
       redirect_to result_result_path(@result)
     else

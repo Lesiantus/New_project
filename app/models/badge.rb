@@ -2,11 +2,9 @@ class Badge < ApplicationRecord
   RULES = %W[category levels first_attempt].freeze
   has_many :user_badges, dependent: :destroy
   has_many :users, through: :user_badges
-  belongs_to :category, class_name: 'Category', optional: true
 
   validates :title, :image_name, presence: true
   validates :rule, inclusion: { in: RULES }
-
   def self.images
     images_path = 'app/assets/images/'
     badges = Dir.glob("#{images_path}badges/*")

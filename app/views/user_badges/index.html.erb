@@ -1,0 +1,24 @@
+<h1><%= t('.head') %></h1>
+
+  <title>table-layout</title>
+  <style>
+   table {
+    width: 50%;
+   }
+  </style>
+
+<table>
+  <tr>
+    <th><%= t('.rule') %></th>
+    <th><%= t('.badge') %></th>
+  </tr>
+
+  <% @user_badges.where(user_id: current_user.id).each do |user_badges| %>
+    <tr>
+      <td><%= user_badges.badge.rule %></td>
+      <td><%= image_tag("#{Badge.find(user_badges.badge_id).image_name}", width:'100px') %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to t('.back'), tests_path %>

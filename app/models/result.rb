@@ -20,6 +20,10 @@ class Result < ApplicationRecord
     success_count >= SUCCESS_RATIO
   end
 
+  def success!
+    update(success: true) if successfull?
+  end
+
   def success_count
     100 / test.questions.count * correct_question
   end

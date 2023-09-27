@@ -40,6 +40,14 @@ class Result < ApplicationRecord
     test.questions.count
   end
 
+  def time_limit_test?
+    test.timer.present?
+  end
+
+  def remaining_seconds
+    ((created_at + test.timer.minutes) - Time.current).to_i
+  end
+
   private
 
   def set_current_question

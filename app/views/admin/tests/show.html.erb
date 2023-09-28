@@ -31,6 +31,11 @@
   </table>
 </p>
 
+<p>
+  <strong><%= t('.timer') %></strong>
+  <%= @test.timer %>
+  <%= t('.no_time_limit') unless @test.timer  %>
+</p>
 
 <%= link_to t('.edit'), edit_admin_test_path(@test) %><br>
 <%= link_to t('.add'), new_admin_test_question_path(test_id: @test.id) %><br>

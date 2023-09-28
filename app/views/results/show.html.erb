@@ -1,4 +1,4 @@
-
+<%= render 'timer' if @result.test.timer.present?%>
 <div class="row justify-content-center mt-3">
   <div class="col col-md-4"><h1><%= t('.test_begin', title: @result.test.title) %>
   </h1>
@@ -11,7 +11,7 @@
         <%= @result.current_question.body %>
       </b>
 
-      <%= form_with url: result_path(@result), local: true, method: :put do |form| %>
+      <%= form_with url: result_path(@result), id: 'form',  local: true, method: :put do |form| %>
         <%= form.collection_check_boxes :answer_ids, @result.current_question.answers, :id, :body, include_hidden: false do |b| %>
           <p>
             <%= b.check_box id: "answer_ids_#{b.object.id}" %>
@@ -22,5 +22,6 @@
         <p><%= link_to t('.gist_question'), gists_path(@result), method: :post %></p>
         <p><%= form.submit t('.next') %></p>
       <% end %>
+
   </div>
 </div>

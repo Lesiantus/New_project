@@ -8,7 +8,7 @@ class Result < ApplicationRecord
   before_validation :set_current_question, on: %i[create update]
 
   def completed?
-    current_question.nil?
+    time_over? || current_question.nil?
   end
 
   def accept!(answer_ids)
@@ -42,6 +42,14 @@ class Result < ApplicationRecord
 
   def remaining_seconds
     ((created_at + test.timer.minutes) - Time.current).to_i
+  end
+
+  def time_over?
+    test.timer && Time.now > end_time
+  end
+
+  def end_time
+    created_at + test.timer.minutes
   end
 
   private

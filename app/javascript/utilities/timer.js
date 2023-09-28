@@ -18,7 +18,7 @@ class TestTimer {
     if (this.limitInSeconds === 0) {
       this.stopTimer();
       alert("Time is over");
-      window.location.replace(window.location + '/result');
+      form.submit();
     }
   }
 
